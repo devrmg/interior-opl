@@ -557,7 +557,7 @@ p {
   padding: 0;
   position: relative; }
   .navbar .navbar-brand img {
-    max-width: 180px; }
+    max-width: 200px; }
   .navbar .navbar-toggler .toggler-icon {
     width: 30px;
     height: 2px;
@@ -639,7 +639,7 @@ p {
     position: absolute;
     top: 0;
     right: 0;
-    width: 55%;
+    width: 44%;
     height: 100%; }
   .header-banner .banner-content {
     position: relative;
@@ -949,7 +949,7 @@ p {
     padding-bottom: 80px; } }
 
 .single-team .team-image img {
-  width: 100%; }
+  width: 45%; }
 
 .single-team .team-content {
   width: 80%;
