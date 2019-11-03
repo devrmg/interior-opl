@@ -3,9 +3,15 @@
 
   // cria as variaveis  
   // e obtem os dados digitados pelo usuario
-  String vnome  = request.getParameter( "txtnome" ) ;
-  int    vidade = Integer.parseInt(request.getParameter( "txtidade" )) ;
-  String vemail vemail = request.getParameter( "txtemail" ) ;
+  String vnome  = request.getParameter( "input" ) ;
+  String vendereco = request.getParameter( "input1")
+  int    vcep = Integer.parseInt(request.getParameter( "number" )) ;
+  int    vfone = Integer.parseInt(request.getParameter( "number1" )) ;
+  String vmarca = request.getParameter( "select");
+  String vmodelo = request.getParameter( "input3");
+  String vdefeitos = request.getParameter( "checkbox[]");
+  String vmensagem = request.getParameter( "textarea");
+
   
   // mostra na tela as informa��es
   //
@@ -29,7 +35,7 @@
   Connection conexao = DriverManager.getConnection(url,usuario,senha);
 
   // prepara o comondo para inserir 
-  String sql = "INSERT INTO cadastro_m1 (nome,endereco,cep,fone,marca,modelo,defeitos,mensagem) VALUES ('" + vnome + "','"+ endereco + "'," + cep + "," + fone + ",'" + marca + "','" + modelo + "','" + defeitos + "','" + mensagem "')" ;
+  String sql = "INSERT INTO cadastro_m1 (nome,endereco,cep,fone,marca,modelo,defeitos,mensagem) VALUES ('" + vnome + "','"+ vendereco + "'," + vcep + "," + vfone + ",'" + vmarca + "','" + vmodelo + "','" + vdefeitos + "','" + vmensagem "')" ;
 
   // cria o objeto statement para executar
   // o comando do sql
