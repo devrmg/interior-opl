@@ -1,41 +1,44 @@
-<%@ page language="java" import="java.sql.*"  %>
+﻿<%@ page language="java"  import="java.sql.*"%>
 <%
 
   // cria as variaveis  
   // e obtem os dados digitados pelo usuario
   String vnome  = request.getParameter( "input" ) ;
-  String vendereco = request.getParameter( "input1")
-  int    vcep = Integer.parseInt(request.getParameter( "number" )) ;
-  int    vfone = Integer.parseInt(request.getParameter( "number1" )) ;
+  String vendereco = request.getParameter( "input1");
+  String vcep = request.getParameter( "number" ) ;
+  String vfone = request.getParameter( "number1" ) ;
   String vmarca = request.getParameter( "select");
   String vmodelo = request.getParameter( "input3");
   String vdefeitos = request.getParameter( "checkbox[]");
   String vmensagem = request.getParameter( "textarea");
 
   
-  // mostra na tela as informa��es
+  // mostra na tela as informa
   //
-  out.print( "Nome: "  +  vnome + "<br>") ;
-  out.print( "Idade: "  +  vidade + "<br>") ;
-  out.print( "Email: "  +  vemail + "<br>") ;
-
+  out.print( "vnome: "  +  vnome + "<br>") ;
+  out.print( "vendereco : "  +  vendereco  + "<br>") ;
+  out.print( "vcep: "  +  vcep + "<br>") ;
+  out.print( "vfone: "  +  vfone + "<br>") ;
+  out.print( "vmarca: "  +  vmarca + "<br>") ;
+  out.print( "vmodelo: "  +  vmodelo + "<br>") ;
+  out.print( "vdefeitos: "  +  vdefeitos + "<br>") ;
+  out.print( "vmensagem: "  +  vmensagem + "<br>") ;
   // cria as variaveis para conexao com o banco de dados
-  //
+ 
   String driver = "net.sourceforge.jtds.jdbc.Driver" ;
-  String url     = "jdbc:jtds:sqlserver://10.4.0.90:1433/bdRA" ;
-  String usuario = "bdRA" ;
+  String url     = "jdbc:jtds:sqlserver://10.4.0.90:1433/bd201912019" ;
+  String usuario = "bd201912019" ;
   String senha   = "123456" ;
 
-  // carrega o driver na mem�ria
-  //
+  // carrega o driver na memria
+ 
   Class.forName(driver) ;
 
   // cria a conexao com o banco
-  //
   Connection conexao = DriverManager.getConnection(url,usuario,senha);
 
   // prepara o comondo para inserir 
-  String sql = "INSERT INTO cadastro_m1 (nome,endereco,cep,fone,marca,modelo,defeitos,mensagem) VALUES ('" + vnome + "','"+ vendereco + "'," + vcep + "," + vfone + ",'" + vmarca + "','" + vmodelo + "','" + vdefeitos + "','" + vmensagem "')" ;
+  String sql = "INSERT INTO cadastro2 (vnome,vendereco,vcep,vfone,vmarca,vmodelo,vdefeitos,vmensagem) VALUES ('" + vnome + "','"+ vendereco + "','" + vcep + "','" + vfone + "','" + vmarca + "','" + vmodelo + "','" + vdefeitos + "','" + vmensagem + "')" ;
 
   // cria o objeto statement para executar
   // o comando do sql
@@ -51,21 +54,10 @@
   out.print("Dados gravados com sucesso!!!") ;
 
   out.print("<br>") ;
-  out.print("<a href='cadastro.html'>Voltar</a>") ; 
+  out.print("<a href='index.html'>Voltar</a>") ; 
 
 %>
 
-
-CREATE TABLE cadastro_m1 (
-	codigo INT PRIMARY KEY IDENTITY(1,1),
-    nome varchar(100),
-	endereco VARCHAR(100), 
-	cep  varchar(6),
-    fone varchar(13),
-    marca varchar(200),
-	modelo varchar(30),
-    defeitos varchar(200),
-    mensagem(900),
 
 
 
