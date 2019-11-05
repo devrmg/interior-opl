@@ -149,7 +149,7 @@ p {
 
 /*===== All Section Title Style =====*/
 .section-title .sub-title {
-  font-size: 18px;
+  font-size: 16px;
   color: #ef4a37;
   text-transform: uppercase; }
   @media (max-width: 767px) {
@@ -646,15 +646,20 @@ p {
     z-index: 9; }
     .header-banner .banner-content .sub-title {
       font-size: 24px;
-      color: #ef4a37;
+      color: #a5a4a4;
       text-transform: uppercase; }
       @media (max-width: 767px) {
         .header-banner .banner-content .sub-title {
           font-size: 18px; } }
     .header-banner .banner-content .banner-title {
-      font-size: 60px; }
+      font-size: 60px;
+       }
       .header-banner .banner-content .banner-title span {
-        color: #ef4a37; }
+      text-shadow: 2px 2px #424242;
+        text-decoration: underline;
+  -webkit-text-decoration-color: rgb(0, 0, 0); /* Safari */  
+  text-decoration-color: rgb(0, 0, 0);
+       }
       @media (max-width: 767px) {
         .header-banner .banner-content .banner-title {
           font-size: 38px; } }
