@@ -656,8 +656,7 @@ p {
        }
       .header-banner .banner-content .banner-title span {
       text-shadow: 2px 2px #424242;
-      
-
+       font-style: italic;
        }
       @media (max-width: 767px) {
         .header-banner .banner-content .banner-title {
