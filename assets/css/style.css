@@ -643,6 +643,10 @@ p {
     width: 40%;
     height: 90%; }*/
 
+    #banne {
+      float: right;
+    }
+
 
   .header-banner .banner-content {
     position: relative;
